@@ -1,0 +1,24 @@
+{% extends 'pasosbaile/base.html' %}
+
+
+
+{% block head_title %} Figura {{paso_baile.name}} de {{paso_baile.tipobaile}}{% endblock %}
+
+
+{% block body_title %} Figura {{paso_baile.name}} de {{paso_baile.tipobaile}}{% endblock %}
+
+
+{% block content %}
+ 
+ 
+ <embed width="420" height="345"
+src="http://www.youtube.com/v/{{video_tag}}"
+type="application/x-shockwave-flash">
+</embed>
+
+	
+	<p>	{{paso_baile.comment}} </p>
+ 
+
+{% endblock %}
+

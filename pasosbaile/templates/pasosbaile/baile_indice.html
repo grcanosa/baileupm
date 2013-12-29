@@ -1,0 +1,22 @@
+{% extends 'pasosbaile/base.html' %}
+
+{% block head_title %} Pasos de {{dancetype_name}}{% endblock %}
+
+
+{% block body_title %} Pasos de {{dancetype_name}}{% endblock %}
+
+
+{% block content %}
+  {% if dancestep_list %}
+	
+		<ul>
+ 		{% for dancestep in dancestep_list %}
+           	<li><h2><a href="/pasosbaile/{{ dancestep.tipobaile }}/{{ dancestep.id}} ">{{ dancestep.name }}</a></h2></li>
+    	{% endfor %}
+    	</ul>
+ 
+	{% else %}
+    		<p>No hay pasos de {{dancetype_name}} en la base de datos.</p>
+	{% endif %}
+
+{% endblock %}

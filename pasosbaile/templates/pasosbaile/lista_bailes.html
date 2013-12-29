@@ -1,0 +1,20 @@
+{% extends 'pasosbaile/base.html' %}
+
+{% block head_title %} Tipos de Baile {% endblock %}
+
+
+{% block body_title %} Tipos de Baile {% endblock %}
+
+
+{% block content %}
+
+	
+		<ul>
+ 		{% for tipobaile in listabailes %}
+           	<li><a href="/pasosbaile/{{ tipobaile.name }} ">{{ tipobaile.name }}</a></li>
+    	{% endfor %}
+    	</ul>
+ 
+
+
+{% endblock %}
